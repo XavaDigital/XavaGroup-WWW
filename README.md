@@ -23,6 +23,6 @@ No build step. Open `index.html` in a browser, or host the folder on any static 
 
 ## Contact form
 
-By default the form opens the visitor's email app with the message pre-filled, so it works with no backend.
+Submissions go to Formspree (`FORM_ENDPOINT` at the top of `assets/main.js`), which forwards them by email. Each email's subject is `[Xava Group] <topic> (<invoice number>)`, and the sender's address is included so you can reply directly.
 
-To receive submissions directly instead, create a form endpoint (for example with [Formspree](https://formspree.io)) and paste its URL into `FORM_ENDPOINT` at the top of `assets/main.js`. The form sends JSON with `name`, `email`, `topic`, `invoice` and `message`.
+If `FORM_ENDPOINT` is emptied, the form falls back to opening the visitor's email app with the message pre-filled, addressed to `CONTACT_EMAIL`.

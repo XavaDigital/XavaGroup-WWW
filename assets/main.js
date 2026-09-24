@@ -10,7 +10,7 @@
   instead open the visitor's email app with the message pre-filled,
   addressed to CONTACT_EMAIL.
 */
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xkjgzrwp";
 const CONTACT_EMAIL = "hello@xavagroup.com";
 
 document.documentElement.classList.add("js");
@@ -113,7 +113,7 @@ form.addEventListener("submit", async (e) => {
     const res = await fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, _subject: `[Xava Group] ${data.topic}${data.invoice ? ` (${data.invoice})` : ""}` }),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     form.reset();
