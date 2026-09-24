@@ -19,8 +19,7 @@ No build step. Open `index.html` in a browser, or host the folder on any static 
 ## Common edits
 
 - **Add a brand:** copy one `<a class="card">` block in the `#brands` section of `index.html`. Set the `href`, the `--accent` colour, the initials badge, the name, the tag and the description. Also add the brand to the `topic` dropdown in the contact form, and to the footer if you want it there.
-- **Review Us link:** it currently points to the contact section. Swap in the real URL once it's live (look for the `TODO` comment).
-- **Email addresses:** `hello@xavagroup.com` and `accounts@xavagroup.com` are placeholders. Update them in `index.html` (contact details and the JSON-LD block) and in `CONTACT_EMAIL` in `assets/main.js`.
+- **Email address:** the site uses `hello@xavagroup.com`. It appears in `index.html` (contact details and the JSON-LD block) and in `CONTACT_EMAIL` in `assets/main.js`.
 
 ## Contact form
 
