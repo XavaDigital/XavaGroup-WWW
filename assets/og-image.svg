@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b7bff"/>
+      <stop offset="1" stop-color="#3fd8ff"/>
+    </linearGradient>
+    <radialGradient id="o" cx="0.15" cy="0" r="0.8">
+      <stop offset="0" stop-color="#5b45ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#07080c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#07080c"/>
+  <rect width="1200" height="630" fill="url(#o)"/>
+  <g transform="translate(100 215)">
+    <rect x="3" y="3" width="194" height="194" rx="54" fill="none" stroke="url(#g)" stroke-width="8"/>
+    <path d="M60 60 L140 140 M140 60 L60 140" stroke="url(#g)" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <text x="360" y="330" font-family="Space Grotesk, Arial, sans-serif" font-size="110" font-weight="700" fill="#eef0f6" letter-spacing="-4">Xava Group</text>
+  <text x="364" y="395" font-family="Inter, Arial, sans-serif" font-size="32" fill="#9aa0b4">One group. Many brands.</text>
+</svg>
