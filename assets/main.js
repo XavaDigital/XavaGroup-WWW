@@ -13,16 +13,15 @@
 const FORM_ENDPOINT = "https://formspree.io/f/xkjgzrwp";
 const CONTACT_EMAIL = "hello@xavagroup.com";
 
-document.documentElement.classList.add("js");
-
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Nav background on scroll
+// Nav background once the page is scrolled (observer avoids forced layout)
 const nav = document.querySelector(".nav");
-const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 20);
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
+const sentinel = document.querySelector(".top-sentinel");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => nav.classList.toggle("is-scrolled", !entry.isIntersecting)).observe(sentinel);
+}
 
 // Reveal on scroll, staggered within each parent
 const revealEls = document.querySelectorAll(".reveal");
