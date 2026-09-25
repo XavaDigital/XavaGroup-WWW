@@ -2,6 +2,21 @@
    Xava Group
    ========================================================== */
 
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #07080c;
   --bg-2: #0d0f16;
@@ -61,12 +76,14 @@ p { margin: 0; }
 
 .bg__orb {
   position: absolute; border-radius: 50%;
-  filter: blur(90px); opacity: 0.55;
+  background: radial-gradient(closest-side, var(--orb), transparent);
+  opacity: 0.55;
+  will-change: transform;
   animation: drift 22s ease-in-out infinite alternate;
 }
-.bg__orb--a { width: 560px; height: 560px; background: #5b45ff; top: -180px; left: -120px; }
-.bg__orb--b { width: 480px; height: 480px; background: #0fb8e6; top: -120px; right: -140px; animation-delay: -7s; opacity: 0.4; }
-.bg__orb--c { width: 420px; height: 420px; background: #c026d3; top: 55vh; left: 45%; animation-delay: -13s; opacity: 0.18; }
+.bg__orb--a { --orb: #5b45ff; width: 900px; height: 900px; top: -400px; left: -340px; }
+.bg__orb--b { --orb: #0fb8e6; width: 800px; height: 800px; top: -340px; right: -360px; animation-delay: -7s; opacity: 0.4; }
+.bg__orb--c { --orb: #c026d3; width: 700px; height: 700px; top: calc(55vh - 140px); left: calc(45% - 140px); animation-delay: -13s; opacity: 0.18; }
 
 @keyframes drift {
   0%   { transform: translate(0, 0) scale(1); }
