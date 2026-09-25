@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xava Group | The home of our brands</title>
   <meta name="description" content="Xava Group is the New Zealand parent company behind Xava Digital, BeastMode, Medals.co.nz, Review Us and more. If you've received an invoice or receipt from Xava Group, this is where you'll find which brand it relates to." />
-  <meta name="theme-color" content="#07080c" />
+  <meta name="theme-color" content="#0f0818" />
   <link rel="canonical" href="https://xavagroup.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/logos/xava-group-icon-512.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Xava Group" />
@@ -17,6 +18,7 @@
 
   <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="assets/styles.css" />
 
   <script type="application/ld+json">
@@ -24,6 +26,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Xava Group",
+    "logo": "https://xavagroup.com/assets/logos/xava-group-icon-512.png",
     "url": "https://xavagroup.com",
     "email": "hello@xavagroup.com",
     "areaServed": "NZ",
@@ -37,6 +40,7 @@
   </script>
 </head>
 <body>
+  <div class="top-sentinel" aria-hidden="true"></div>
   <!-- Ambient background -->
   <div class="bg" aria-hidden="true">
     <div class="bg__grid"></div>
@@ -48,17 +52,7 @@
 
   <header class="nav">
     <a class="nav__logo" href="#top" aria-label="Xava Group home">
-      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <defs>
-          <linearGradient id="lg-nav" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#8b7bff" />
-            <stop offset="1" stop-color="#3fd8ff" />
-          </linearGradient>
-        </defs>
-        <rect x="1" y="1" width="38" height="38" rx="11" fill="none" stroke="url(#lg-nav)" stroke-width="2" />
-        <path d="M12 12 L28 28 M28 12 L12 28" stroke="url(#lg-nav)" stroke-width="3.2" stroke-linecap="round" />
-      </svg>
-      <span>Xava<b>Group</b></span>
+      <img src="assets/logo.svg" width="94" height="42" alt="Xava Group" />
     </a>
     <nav class="nav__links" aria-label="Main">
       <a href="#brands">Our brands</a>
@@ -72,8 +66,8 @@
     <section class="hero">
       <p class="eyebrow"><span class="dot"></span> Proudly New Zealand owned</p>
       <h1 class="hero__title">
-        One group.<br />
-        <span class="gradient-text">Many brands.</span>
+        One group<span class="stop">.</span><br />
+        <span class="gradient-text">Many brands</span><span class="stop">.</span>
       </h1>
       <p class="hero__lede">
         Xava Group is the parent company behind a family of New Zealand businesses, from digital
